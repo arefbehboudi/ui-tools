@@ -20,7 +20,6 @@
     </properties>
 
 
-
     <dependencies>
 
         <dependency>
@@ -82,5 +81,13 @@
         </dependency>
 
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>UI Tools</name>
+            <url>https://maven.pkg.github.com/arefbehboudi/ui-tools</url>
+        </repository>
+    </distributionManagement>
 
 </project>
