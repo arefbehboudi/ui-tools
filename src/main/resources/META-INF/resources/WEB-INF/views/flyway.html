@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flyway Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">
+        Flyway Dashboard
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#configuration">Configuration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#migration">Migration</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Configuration Section -->
+    <h2 class="text-info" id="configuration">Configuration</h2>
+    <table class="table table-striped table-hover">
+        <tbody>
+        <tr>
+            <th scope="row">Datasource</th>
+            <td id="datasource">jdbc:mysql://localhost:3306/mydb</td>
+        </tr>
+        <tr>
+            <th scope="row">Encoding</th>
+            <td id="encoding">UTF-8</td>
+        </tr>
+        <tr>
+            <th scope="row">Is init on migrate?</th>
+            <td id="initOnMigrate"><span class="text-success"><i class="fas fa-check"></i></span></td>
+        </tr>
+        <tr>
+            <th scope="row">Is out of order?</th>
+            <td id="outOfOrder"><span class="text-danger"><i class="fas fa-times"></i></span></td>
+        </tr>
+        <tr>
+            <th scope="row">Is clean on validation error?</th>
+            <td id="cleanOnValidationError"><span class="text-success"><i class="fas fa-check"></i></span></td>
+        </tr>
+        <tr>
+            <th scope="row">Is validate on migrate?</th>
+            <td id="validateOnMigrate"><span class="text-success"><i class="fas fa-check"></i></span></td>
+        </tr>
+        <tr>
+            <th scope="row">Table</th>
+            <td id="table">flyway_schema_history</td>
+        </tr>
+        <tr>
+            <th scope="row">Init description</th>
+            <td id="baselineDescription">Baseline</td>
+        </tr>
+        <tr>
+            <th scope="row">SQL Migration Prefix</th>
+            <td id="sqlMigrationPrefix">V</td>
+        </tr>
+        <tr>
+            <th scope="row">Locations</th>
+            <td id="locations">filesystem:src/main/resources/db/migration</td>
+        </tr>
+        <tr>
+            <th scope="row">Schemas</th>
+            <td id="schemas">public</td>
+        </tr>
+    </table>
+
+    <!-- Migration Section -->
+    <h2 class="text-info" id="migration">Migration</h2>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Version</th>
+            <th scope="col">Description</th>
+            <th scope="col">Type</th>
+            <th scope="col">Script</th>
+            <th scope="col">State</th>
+            <th scope="col">Date</th>
+            <th scope="col">Execution Time</th>
+            <th scope="col">Checksum</th>
+        </tr>
+        </thead>
+        <tbody id="migrationInfo">
+        </tbody>
+    </table>
+</div> <!-- /container -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
