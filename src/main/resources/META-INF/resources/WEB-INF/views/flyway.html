@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <title>Flyway Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 70px;
-        }
-
-        .table th, .table td {
-            vertical-align: middle;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -42,11 +34,11 @@
         <tbody>
         <tr>
             <th scope="row">Datasource</th>
-            <td id="datasource">jdbc:mysql://localhost:3306/mydb</td>
+            <td id="datasource"></td>
         </tr>
         <tr>
             <th scope="row">Encoding</th>
-            <td id="encoding">UTF-8</td>
+            <td id="encoding"></td>
         </tr>
         <tr>
             <th scope="row">Is init on migrate?</th>
@@ -66,25 +58,33 @@
         </tr>
         <tr>
             <th scope="row">Table</th>
-            <td id="table">flyway_schema_history</td>
+            <td id="table"></td>
         </tr>
         <tr>
             <th scope="row">Init description</th>
-            <td id="baselineDescription">Baseline</td>
+            <td id="baselineDescription"></td>
         </tr>
         <tr>
-            <th scope="row">SQL Migration Prefix</th>
+            <th scope="row"></th>
             <td id="sqlMigrationPrefix">V</td>
         </tr>
         <tr>
             <th scope="row">Locations</th>
-            <td id="locations">filesystem:src/main/resources/db/migration</td>
+            <td id="locations"></td>
         </tr>
         <tr>
             <th scope="row">Schemas</th>
-            <td id="schemas">public</td>
+            <td id="schemas"></td>
         </tr>
     </table>
+
+    <div class="btn-container">
+        <button type="button" class="btn btn-primary" id="migrateBtn">Migrate</button>
+        <button type="button" class="btn btn-secondary" id="undoBtn">Undo</button>
+        <button type="button" class="btn btn-warning" id="repairBtn">Repair</button>
+        <button type="button" class="btn btn-info" id="validateBtn">Validate</button>
+        <button type="button" class="btn btn-danger" id="cleanBtn">Clean</button>
+    </div>
 
     <!-- Migration Section -->
     <h2 class="text-info" id="migration">Migration</h2>
