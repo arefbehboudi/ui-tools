@@ -1,4 +1,4 @@
-package io.github.arefbehboudi;
+package io.github.arefbehboudi.service;
 
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.FlywayException;

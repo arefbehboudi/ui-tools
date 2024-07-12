@@ -1,6 +1,7 @@
-package io.github.arefbehboudi;
+package io.github.arefbehboudi.controller;
 
 
+import io.github.arefbehboudi.service.FlywayService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
