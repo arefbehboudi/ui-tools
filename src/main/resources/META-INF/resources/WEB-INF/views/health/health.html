@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Status Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .status-up {
+            color: green;
+        }
+        .status-down, .status-unknown {
+            color: red;
+        }
+        .refresh-btn {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+        }
+        .nested-table {
+            padding-left: 40px; /* Two tab equivalent */
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">
+        Status Dashboard
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#components">Components</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="text-right mb-3">
+        <button type="button" class="btn btn-primary refresh-btn" onclick="refreshDashboard()">Refresh Dashboard</button>
+    </div>
+    <h2 class="text-info" id="components">Components</h2>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Component Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Details</th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody id="statusTableBody">
+        <!-- Dynamic content will be inserted here -->
+        </tbody>
+    </table>
+</div> <!-- /container -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="health.js"></script>
+</body>
+</html>

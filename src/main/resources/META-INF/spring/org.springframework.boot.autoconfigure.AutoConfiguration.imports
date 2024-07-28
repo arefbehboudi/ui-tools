@@ -2,3 +2,5 @@ io.github.arefbehboudi.service.FlywayService
 io.github.arefbehboudi.service.QuartzSchedulerService
 io.github.arefbehboudi.controller.FlywayController
 io.github.arefbehboudi.controller.QuartzSchedulerController
+io.github.arefbehboudi.service.HealthStatusService
+io.github.arefbehboudi.controller.HealthStatusController
