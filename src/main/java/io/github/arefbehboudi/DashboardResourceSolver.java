@@ -6,13 +6,13 @@ import org.springframework.web.servlet.resource.ResourceResolver;
 import org.springframework.web.servlet.resource.ResourceResolverChain;
 import java.util.List;
 
-public class FlywayResourceSolver implements ResourceResolver {
+public class DashboardResourceSolver implements ResourceResolver {
 
     @Override
     public Resource resolveResource(HttpServletRequest request, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain) {
         Resource resolved = chain.resolveResource(request, requestPath, locations);
         if (resolved == null) {
-            String webJarResourcePath = "";//findWebJarResourcePath(requestPath);
+            String webJarResourcePath = "";
             if (webJarResourcePath != null)
                 return chain.resolveResource(request, webJarResourcePath, locations);
         }
@@ -23,7 +23,7 @@ public class FlywayResourceSolver implements ResourceResolver {
     public String resolveUrlPath(String resourcePath, List<? extends Resource> locations, ResourceResolverChain chain) {
         String path = chain.resolveUrlPath(resourcePath, locations);
         if (path == null) {
-            String webJarResourcePath = "";//findWebJarResourcePath(resourcePath);
+            String webJarResourcePath = "";
             if (webJarResourcePath != null)
                 return chain.resolveUrlPath(webJarResourcePath, locations);
         }
