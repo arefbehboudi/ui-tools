@@ -38,7 +38,7 @@ Add the following dependency to your `pom.xml` file:
 <dependency>
     <groupId>io.github.arefbehboudi</groupId>
     <artifactId>ui-tools</artifactId>
-    <version>0.1.7</version>
+    <version>0.1.8</version>
 </dependency>
 ```
 
