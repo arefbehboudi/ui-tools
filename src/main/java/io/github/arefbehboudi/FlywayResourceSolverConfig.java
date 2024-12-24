@@ -15,7 +15,7 @@ public class FlywayResourceSolverConfig extends WebMvcConfigurationSupport {
                 .addResourceLocations("classpath:/META-INF/resources/WEB-INF/views/")
                 .setCachePeriod(0)
                 .resourceChain(false)
-                .addResolver(new FlywayResourceSolver());
+                .addResolver(new DashboardResourceSolver());
 
     }
 }
