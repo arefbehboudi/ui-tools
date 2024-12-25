@@ -12,10 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class DashboardService {
 
     public DashboardResponse getData() {
-        for (int i = 0; i < 500; i++) {
-            new Thread().start();
-        }
-
         DashboardResponse dashboardResponse = new DashboardResponse();
 
         Map<Thread, StackTraceElement[]> allStackTraces = Thread.getAllStackTraces();
