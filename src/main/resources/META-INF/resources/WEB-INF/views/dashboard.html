@@ -29,6 +29,26 @@
             font-size: 2.5rem;
             font-weight: bold;
         }
+        #controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #controls select, #controls button {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #controls button:hover, #controls select:hover {
+            background-color: #444;
+        }
     </style>
 </head>
 <body>
@@ -44,8 +64,20 @@
         </div>
     </div>
 
+    <div id="controls">
+
+        <select id="refreshInterval">
+            <option value="3">3 seconds</option>
+            <option value="5">5 seconds</option>
+            <option value="10">10 seconds</option>
+            <option value="15">15 seconds</option>
+        </select>
+
+        <button id="toggleAutoRefresh">Disable Auto-Refresh</button>
+    </div>
+
+
     <div class="row">
-        <!-- Uptime and Thread Count -->
         <div class="col-md-6">
             <div class="card mb-3">
                 <div class="card-body">

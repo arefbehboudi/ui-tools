@@ -70,12 +70,12 @@ public class DashboardService {
         return (int) (bytes / BYTES_IN_MB);
     }
 
-    private static double calculateUsagePercentage(long used, long max) {
+    private double calculateUsagePercentage(long used, long max) {
         double percentage = (max > 0) ? ((double) used / max) * 100 : 0.0;
         return Double.parseDouble(String.format("%.2f", percentage));
     }
 
-    public static String formatUptime(long uptimeMillis) {
+    public String formatUptime(long uptimeMillis) {
         long seconds = TimeUnit.MILLISECONDS.toSeconds(uptimeMillis);
         long minutes = TimeUnit.MILLISECONDS.toMinutes(uptimeMillis);
         long hours = TimeUnit.MILLISECONDS.toHours(uptimeMillis);
