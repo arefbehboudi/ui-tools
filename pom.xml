@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.arefbehboudi</groupId>
     <artifactId>ui-tools</artifactId>
-    <version>0.2.1</version>
+    <version>0.2.3</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>UI Tools</description>
