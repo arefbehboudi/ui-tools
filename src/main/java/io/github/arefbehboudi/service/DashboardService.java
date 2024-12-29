@@ -110,4 +110,8 @@ public class DashboardService {
 
         return result.toString().trim();
     }
+
+    public void performGC() {
+        Runtime.getRuntime().gc();
+    }
 }

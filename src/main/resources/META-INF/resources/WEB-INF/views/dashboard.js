@@ -207,6 +207,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
+    document.getElementById('performGC').addEventListener('click', function () {
+        fetch(url + "gc", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+    });
+
     startAutoRefresh();
 });
 

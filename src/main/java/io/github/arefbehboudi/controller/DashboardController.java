@@ -2,10 +2,7 @@ package io.github.arefbehboudi.controller;
 
 import io.github.arefbehboudi.model.DashboardResponse;
 import io.github.arefbehboudi.service.DashboardService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/dashboard")
@@ -22,6 +19,12 @@ public class DashboardController {
     @CrossOrigin(origins = "*")
     public DashboardResponse getSchedulerDetails() {
         return dashboardService.getData();
+    }
+
+    @PostMapping("/gc")
+    @CrossOrigin(origins = "*")
+    public void performGC() {
+        dashboardService.performGC();
     }
 
 }
