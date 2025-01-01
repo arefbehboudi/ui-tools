@@ -11,13 +11,12 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/flyway")
 public class FlywayController {
-    private final FlywayService flywayService;
 
+    private final FlywayService flywayService;
 
     public FlywayController(FlywayService flywayService) {
         this.flywayService = flywayService;
     }
-
 
     @GetMapping("/")
     public Map<String, Object> getFlywayConfig() {
