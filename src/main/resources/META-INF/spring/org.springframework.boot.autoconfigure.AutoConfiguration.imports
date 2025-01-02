@@ -5,4 +5,4 @@ io.github.arefbehboudi.controller.QuartzSchedulerController
 io.github.arefbehboudi.service.HealthStatusService
 io.github.arefbehboudi.controller.HealthStatusController
 io.github.arefbehboudi.service.DashboardService
-io.github.arefbehboudi.controller0.DashboardController
+io.github.arefbehboudi.controller.DashboardController

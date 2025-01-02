@@ -1,10 +1,15 @@
 package io.github.arefbehboudi.model;
 
 public class TriggerDetailResponse {
+
     private String name;
+
     private String jobName;
+
     private String status;
+
     private long nextFireTime;
+
     private long previousFireTime;
 
     public String getName() {

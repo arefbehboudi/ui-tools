@@ -3,7 +3,9 @@ package io.github.arefbehboudi.model;
 import java.util.List;
 
 public class SchedulerResponse {
+
     private List<JobDetailResponse> jobs;
+
     private List<TriggerDetailResponse> triggers;
 
     public SchedulerResponse(List<JobDetailResponse> jobs, List<TriggerDetailResponse> triggers) {
