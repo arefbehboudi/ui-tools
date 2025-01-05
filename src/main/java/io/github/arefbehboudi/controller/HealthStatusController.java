@@ -1,6 +1,7 @@
 package io.github.arefbehboudi.controller;
 
 import io.github.arefbehboudi.model.HealthResponse;
+import io.github.arefbehboudi.service.AlertService;
 import io.github.arefbehboudi.service.HealthStatusService;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,9 +13,12 @@ import java.util.Map;
 public class HealthStatusController {
 
     private final HealthStatusService healthStatusService;
+    private final AlertService alertService;
 
-    public HealthStatusController(HealthStatusService healthStatusService) {
+    public HealthStatusController(HealthStatusService healthStatusService,
+                                  AlertService alertService) {
         this.healthStatusService = healthStatusService;
+        this.alertService = alertService;
     }
 
     @GetMapping("/")
@@ -26,13 +30,13 @@ public class HealthStatusController {
     @PostMapping("/alert")
     @CrossOrigin(origins = "*")
     public void createAlert(@RequestBody Map<String, Object> alert) {
-        healthStatusService.createAlert(alert);
+        alertService.createAlert(alert);
     }
 
     @DeleteMapping("/alert")
     @CrossOrigin(origins = "*")
     public void deleteAlert(@RequestBody Map<String, Object> alert) {
-        healthStatusService.deleteAlert(alert);
+        alertService.deleteAlert(alert);
     }
 
 }
