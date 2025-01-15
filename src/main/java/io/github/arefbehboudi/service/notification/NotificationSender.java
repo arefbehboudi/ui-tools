@@ -38,8 +38,8 @@ public class NotificationSender {
         for (HealthResponse healthResponse : status) {
             if (healthResponse.getAlert() && healthResponse.getStatus().equals("DOWN")) {
                 try {
-                    messageServiceFactory.getSender(messageType).send(":no_entry:" + healthResponse.getName().formatted(" Is Down") + ":no_entry:");
-
+                    messageServiceFactory.getSender(messageType)
+                            .send(":no_entry: " + healthResponse.getName().formatted(" Is Down ") + ":no_entry:");
                 } catch (Exception e) {
                     //IGNORE
                 }
