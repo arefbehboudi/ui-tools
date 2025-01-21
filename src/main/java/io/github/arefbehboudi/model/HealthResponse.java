@@ -8,6 +8,8 @@ public class HealthResponse {
 
     private Boolean alert;
 
+    private Integer lastMessageSend;
+
     public HealthResponse(String name, String status, Boolean alert) {
         this.name = name;
         this.status = status;
@@ -24,5 +26,13 @@ public class HealthResponse {
 
     public Boolean getAlert() {
         return alert;
+    }
+
+    public Integer getLastMessageSend() {
+        return lastMessageSend;
+    }
+
+    public void setLastMessageSend(Integer lastMessageSend) {
+        this.lastMessageSend = lastMessageSend;
     }
 }

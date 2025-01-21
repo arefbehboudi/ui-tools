@@ -20,7 +20,6 @@ public class QuartzSchedulerService {
     @Autowired(required = false)
     private Scheduler scheduler;
 
-
     public SchedulerResponse getSchedulerDetails() {
         try {
             List<JobDetailResponse> jobs = new ArrayList<>();
