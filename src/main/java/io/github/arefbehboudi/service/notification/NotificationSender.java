@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -39,7 +41,7 @@ public class NotificationSender {
             if (healthResponse.getAlert() && healthResponse.getStatus().equals("DOWN")) {
                 try {
                     messageServiceFactory.getSender(messageType)
-                            .send(":no_entry: " + healthResponse.getName().formatted(" Is Down ") + ":no_entry:");
+                            .send(":no_entry: " + healthResponse.getName() + " Is Down " + ":no_entry:");
                 } catch (Exception e) {
                     //IGNORE
                 }

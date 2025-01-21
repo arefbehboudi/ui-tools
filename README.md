@@ -6,9 +6,19 @@ Your README is clear and provides a solid overview of the project. However, ther
 
 This project provides a web-based dashboard for managing Flyway database migrations and Quartz job scheduling. It includes the following components:
 
+![Alt Text](images/dashboard.png)
+
 - **Flyway Dashboard**: Manage and monitor Flyway database migrations.
+
+![Alt Text](images/flyway.png)
+
 - **Quartz Scheduler Dashboard**: Manage and monitor Quartz job scheduling.
+
+![Alt Text](images/quartz.png)
+
 - **Health Dashboard**: Display the health of application components.
+
+![Alt Text](images/health.png)
 
 ## Features
 
