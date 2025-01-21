@@ -48,7 +48,7 @@ Add the following dependency to your `pom.xml` file:
 <dependency>
     <groupId>io.github.arefbehboudi</groupId>
     <artifactId>ui-tools</artifactId>
-    <version>0.1.8</version>
+    <version>0.2.6</version>
 </dependency>
 ```
 
@@ -91,3 +91,12 @@ Replace `<port>` with your application's running port.
 
 ---
 
+## Configure Alter Messaging
+
+Currently, we only support Slack for sending alerts. To configure it, use the following settings:
+
+```
+io.github.ui-tools.message.channel=SLACK_CHANNEL
+io.github.ui-tools.message.slack.key=SLACK_API
+io.github.ui-tools.message.type=SLACK
+```
