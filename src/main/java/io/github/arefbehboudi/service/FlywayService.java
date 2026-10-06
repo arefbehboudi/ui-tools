@@ -70,8 +70,6 @@ public class FlywayService {
             migrations.add(migration);
         }
 
-        migrations.sort(Comparator.comparing(o -> Double.parseDouble(o.get("rawVersion").toString())));
-
         return migrations;
     }
 
